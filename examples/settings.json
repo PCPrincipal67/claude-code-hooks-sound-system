@@ -1,0 +1,55 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [{
+          "type": "command",
+          "command": "$HOME/.claude/hooks/before-bash.sh"
+        }]
+      },
+      {
+        "matcher": "mcp__*",
+        "hooks": [{
+          "type": "command",
+          "command": "$HOME/.claude/hooks/before-mcp.sh"
+        }]
+      },
+      {
+        "matcher": "Read",
+        "hooks": [{
+          "type": "command",
+          "command": "$HOME/.claude/hooks/before-read.sh"
+        }]
+      },
+      {
+        "matcher": "Write",
+        "hooks": [{
+          "type": "command",
+          "command": "$HOME/.claude/hooks/before-write.sh"
+        }]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [{
+          "type": "command",
+          "command": "$HOME/.claude/hooks/after-tool-use.sh"
+        }]
+      }
+    ],
+    "Notification": [{
+      "hooks": [{
+        "type": "command",
+        "command": "$HOME/.claude/hooks/notification.sh"
+      }]
+    }],
+    "Stop": [{
+      "hooks": [{
+        "type": "command",
+        "command": "$HOME/.claude/hooks/stop.sh"
+      }]
+    }]
+  }
+}
