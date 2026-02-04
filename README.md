@@ -25,7 +25,7 @@
 ### 1. 克隆仓库
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/claude-code-hooks-sound-system.git
+git clone https://github.com/PCPrincipal67/claude-code-hooks-sound-system.git
 cd claude-code-hooks-sound-system
 ```
 
@@ -139,6 +139,12 @@ afplay /System/Library/Sounds/Hero.aiff
 - **macOS**: 完全支持 (使用 afplay)
 - **Linux**: 需修改为 `paplay` 或 `aplay`
 - **Windows**: 需修改为 PowerShell 音频命令
+
+## ⚠️ 注意事项
+
+`after-tool-use.sh` 中检测工具执行失败的功能是**早期试验的遗留**，目前 Claude Code 官方的 `PostToolUse` hook 对错误检测的支持有限，可酌情保留或删除。
+
+后续 Claude Code 官方可能会完善这部分，届时工具执行失败也能准确触发通知。
 
 ## 许可证
 
